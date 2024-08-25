@@ -2,6 +2,8 @@ import "./App.css";
 import RecipeList from "./components/RecipeList";
 import RecipeDetails from "./components/RecipeDetails";
 import AddRecipeForm from "./components/AddRecipeForm";
+
+import SearchBar from "./components/SearchBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const RecipePage = ({ match }) => {
@@ -23,6 +25,7 @@ const HomePage = () => (
   <>
     <RecipeList />
     <AddRecipeForm />
+    <SearchBar />
   </>
 );
 

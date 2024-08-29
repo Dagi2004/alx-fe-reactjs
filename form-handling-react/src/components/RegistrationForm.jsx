@@ -45,56 +45,41 @@ const RegistrationForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="form">
-        <div>
-          <label>
-            Username:
-            <input
-              type="text"
-              name="username"
-              placeholder="Enter UserName"
-              value={formData.username}
-              onChange={handleChange}
-            />
-          </label>
-
-          {errors.username && (
-            <span style={{ color: "red" }}>{errors.username}</span>
-          )}
-        </div>
-        <div>
-          <label>
-            Email:
-            <input
-              type="text"
-              name="username"
-              placeholder="Enter Email"
-              value={formData.email}
-              onChange={handleChange}
-            />
-          </label>
-
-          {errors.email && <span style={{ color: "red" }}>{errors.email}</span>}
-        </div>
-        <div>
-          <label>
-            Password:
-            <input
-              type="text"
-              name="username"
-              placeholder="Enter Password"
-              value={formData.password}
-              onChange={handleChange}
-            />
-          </label>
-          {errors.password && (
-            <span style={{ color: "red" }}>{errors.password}</span>
-          )}
-        </div>
-        <button className="submit" type="submit">
-          Submit
-        </button>
+      <div>
+        <input
+          type="text"
+          name="username"
+          placeholder="Username"
+          value={formData.username}
+          onChange={handleChange}
+        />
+        {errors.username && (
+          <span style={{ color: "red" }}>{errors.username}</span>
+        )}
       </div>
+      <div>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        {errors.email && <span style={{ color: "red" }}>{errors.email}</span>}
+      </div>
+      <div>
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          value={formData.password}
+          onChange={handleChange}
+        />
+        {errors.password && (
+          <span style={{ color: "red" }}>{errors.password}</span>
+        )}
+      </div>
+      <button type="submit">Submit</button>
     </form>
   );
 };

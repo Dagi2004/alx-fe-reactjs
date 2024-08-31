@@ -8,15 +8,15 @@ import {
 import ProfileDetails from "./components/ProfileDetails";
 import ProfileSettings from "./components/ProfileSettings";
 import Profile from "./components/Profile";
-import UserProfile from "./components/UserProfile";
+import BlogPost from "./components/BlogPost";
 import ProtectedRoute from "./components/ProtectedRoute";
 function App() {
   return (
     <Router>
       <nav>
         <Link to="/profile">Profile</Link>
-        <Link to="/user/1">User 1</Link>
-        <Link to="/user/2">User 2</Link>
+        <Link to="/blog/1">Blog Post 1</Link>
+        <Link to="/blog/2">Blog Post 2</Link>
       </nav>
       <Routes>
         <Route
@@ -26,7 +26,7 @@ function App() {
           <Route path="details" element={<ProfileDetails />} />
           <Route path="settings" element={<ProfileSettings />} />
         </Route>
-        <Route path="/user/:userId" element={<UserProfile />} />
+        <Route path="/blog/:postId" element={<BlogPost />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>

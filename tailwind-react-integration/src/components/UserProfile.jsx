@@ -1,10 +1,10 @@
 function UserProfile() {
   return (
-    <div className="user-profile bg-gray-100 sm:p-4 max-w-xs:250  rounded-lg shadow-lg mx-auto my-20 md:p-8 max-w-sm:400">
+    <div className="user-profile bg-gray-100 sm:p-4 max-w-xs rounded-lg shadow-lg mx-auto my-20 md:p-8 max-w-sm">
       <img
         src="https://via.placeholder.com/150"
         alt="User"
-        className="rounded-full w-24 h-24 mx-auto mb-5  md:w-36 h-36"
+        className="rounded-full sm:w-24 sm:h-24 mx-auto mb-5  md:w-36 md:h-36"
       />
       <h1 className="text-blue-800 text-lg my-4 md:text-xl">John Doe</h1>
       <p className="text-gray-600 text-sm md:text-base">

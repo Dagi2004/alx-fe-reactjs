@@ -3,45 +3,23 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav
-      style={{
-        backgroundColor: "#333",
-        padding: "10px",
-        textAlign: "center",
-        display: "flex",
-        justifyContent: "space-around",
-      }}
-    >
-      <ul
-        style={{
-          listStyleType: "none",
-          display: "flex",
-          padding: 0,
-          margin: 0,
-        }}
-      >
+    <div className="flex justify-around items-center bg-slate-600 p-5">
+      <ul className="flex space-x-6 gap-2">
         <li>
-          <Link to="/" style={{ color: "#fff", marginRight: "20px" }}>
-            Home
-          </Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/About" style={{ color: "#fff", marginRight: "20px" }}>
-            About
-          </Link>
+          <Link to="/About">About</Link>
         </li>
         <li>
-          <Link to="/Services" style={{ color: "#fff", marginRight: "20px" }}>
-            Services
-          </Link>
+          <Link to="/Services">Services</Link>
         </li>
         <li>
-          <Link to="/Contact" style={{ color: "#fff", marginRight: "20px" }}>
-            Contact
-          </Link>
+          <Link to="/Contact">Contact</Link>
         </li>
       </ul>
-    </nav>
+    </div>
   );
 }
+
 export default Navbar;

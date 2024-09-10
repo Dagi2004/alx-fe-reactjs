@@ -12,7 +12,7 @@
       "Salt and pepper to taste",
       "Fresh parsley, chopped (for garnish)"
     ],
-    "steps": [
+    "instructions": [
       "Cook the spaghetti in salted boiling water until al dente. Reserve 1 cup of pasta water, then drain.",
       "In a skillet, cook the pancetta over medium heat until crispy. Add garlic and sauté for 1 minute.",
       "In a bowl, whisk together eggs and Parmesan cheese. Season with salt and pepper.",
@@ -38,7 +38,7 @@
       "Salt to taste",
       "Fresh cilantro, for garnish"
     ],
-    "steps": [
+    "instructions": [
       "Marinate chicken in yogurt and tikka masala for at least 1 hour.",
       "Heat oil in a pan and sauté onion until translucent. Add garlic and ginger; cook for 2 minutes.",
       "Add marinated chicken and cook until browned.",
@@ -61,7 +61,7 @@
       "Nori sheets",
       "Soy sauce (for serving)"
     ],
-    "steps": [
+    "instructions": [
       "Rinse sushi rice under cold water until water runs clear. Cook rice with water in a rice cooker or pot.",
       "In a small saucepan, heat vinegar, sugar, and salt until dissolved. Mix with cooked rice.",
       "Spread rice on a bamboo mat covered with plastic wrap. Place a nori sheet on top.",
@@ -83,7 +83,7 @@
       "Cooked rice or noodles, for serving",
       "Sesame seeds (for garnish)"
     ],
-    "steps": [
+    "instructions": [
       "Heat sesame oil in a large skillet or wok over medium-high heat.",
       "Add garlic and ginger; stir-fry for 30 seconds.",
       "Add mixed vegetables and stir-fry for 5-7 minutes until tender-crisp.",
@@ -103,7 +103,7 @@
       "1 tablespoon taco seasoning",
       "Taco shells"
     ],
-    "steps": [
+    "instructions": [
       "In a skillet, cook onion until soft. Add garlic and cook for 1 minute.",
       "Add ground beef and taco seasoning. Cook until browned.",
       "Warm taco shells according to package instructions.",
@@ -128,7 +128,7 @@
       "2 teaspoons vanilla extract",
       "1 cup boiling water"
     ],
-    "steps": [
+    "instructions": [
       "Preheat oven to 350°F (175°C). Grease and flour two 9-inch round cake pans.",
       "In a large bowl, mix flour, cocoa powder, sugar, baking powder, baking soda, and salt.",
       "Add eggs, milk, oil, and vanilla. Beat on medium for 2 minutes. Stir in boiling water (batter will be thin).",

@@ -61,8 +61,8 @@ const RecipeDetail = () => {
               Cooking Steps
             </h2>
             <ol className="list-decimal pl-5 ">
-              {recipe.steps.map((step, index) => (
-                <li key={index}>{step}</li>
+              {recipe.instructions.map((instruction, index) => (
+                <li key={index}>{instruction}</li>
               ))}
             </ol>
           </div>

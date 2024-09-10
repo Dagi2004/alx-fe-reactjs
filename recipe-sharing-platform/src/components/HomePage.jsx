@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-
+import { useNavigate } from "react-router-dom";
 const HomePage = () => {
   const [recipes, setRecipes] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("./src/data.json")
+    fetch("/data.json")
       .then((response) => response.json())
       .then((data) => setRecipes(data));
   }, []);
@@ -17,6 +18,7 @@ const HomePage = () => {
           <div
             key={recipe.id}
             className="overflow-hidden rounded-lg border border-gray-100 bg-white  shadow-md hover:shadow-lg transition-shadow"
+            onClick={() => navigate(`/recipe/${recipe.id}`)}
           >
             <img
               src={recipe.imageURL}

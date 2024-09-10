@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import AddRecipeForm from "../components/AddRecipeForm";
 const HomePage = () => {
   const [recipes, setRecipes] = useState([]);
 
@@ -9,8 +10,12 @@ const HomePage = () => {
       .then((data) => setRecipes(data));
   }, []);
 
+  const handleRecipeAdded = (newRecipe) => {
+    setRecipes((prevRecipes) => [...prevRecipes, newRecipe]);
+  };
+
   return (
-    <div className="container mx-auto px-5 py-8">
+    <div className="container mx-auto px-5 py-8 bg-slate-300">
       <h1 className="text-3xl font-bold mb-5 mt-5 text-center">Recipe List</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {recipes.map((recipe) => (
@@ -34,6 +39,7 @@ const HomePage = () => {
           </Link>
         ))}
       </div>
+      <AddRecipeForm onRecipeAdded={handleRecipeAdded} />
     </div>
   );
 };

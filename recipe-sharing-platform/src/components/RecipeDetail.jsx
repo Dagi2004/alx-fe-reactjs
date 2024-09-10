@@ -1,26 +1,34 @@
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useQuery } from "react-query";
-
-const fetchRecipe = async (id) => {
-  const response = await fetch("/data.json");
-  if (!response.ok) {
-    throw new Error("Network response was not ok");
-  }
-  const data = await response.json();
-  return data.find((r) => r.id === parseInt(id, 10));
-};
 
 const RecipeDetail = () => {
   const { id } = useParams();
-  const {
-    data: recipe,
-    error,
-    isLoading,
-  } = useQuery(["fetchRecipe", id], () => fetchRecipe(id));
+  const [recipe, setRecipe] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+  useEffect(() => {
+    const fetchRecipe = async () => {
+      try {
+        const response = await fetch("/data.json");
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        const selectedRecipe = data.find((r) => r.id === parseInt(id, 10));
+        setRecipe(selectedRecipe);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
+    fetchRecipe();
+  }, [id]);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
   if (!recipe) return <div>Recipe not found</div>;
 
   return (

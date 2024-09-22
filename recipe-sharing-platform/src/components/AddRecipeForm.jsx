@@ -17,8 +17,8 @@ const AddRecipeForm = ({ onRecipeAdded }) => {
           },
           body: JSON.stringify({
             title: recipeTitle,
-            instructions: ingredients,
-            steps,
+            ingredients,
+            instructions: steps,
           }),
         });
 
@@ -126,7 +126,7 @@ const AddRecipeForm = ({ onRecipeAdded }) => {
 
       <button
         type="submit"
-        className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="bg-blue-500 w-full text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
         Submit
       </button>

@@ -16,6 +16,7 @@ const HomePage = () => {
 
   return (
     <div className="container mx-auto px-5 py-8 bg-slate-300">
+      <AddRecipeForm onRecipeAdded={handleRecipeAdded} />
       <h1 className="text-3xl font-bold mb-5 mt-5 text-center">Recipe List</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {recipes.map((recipe) => (
@@ -39,7 +40,6 @@ const HomePage = () => {
           </Link>
         ))}
       </div>
-      <AddRecipeForm onRecipeAdded={handleRecipeAdded} />
     </div>
   );
 };

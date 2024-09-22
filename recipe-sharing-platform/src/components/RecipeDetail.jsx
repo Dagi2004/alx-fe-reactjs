@@ -16,6 +16,7 @@ const RecipeDetail = () => {
         }
         const data = await response.json();
         const selectedRecipe = data.find((r) => r.id === parseInt(id, 10));
+
         setRecipe(selectedRecipe);
       } catch (err) {
         setError(err.message);
@@ -46,23 +47,30 @@ const RecipeDetail = () => {
 
         <div className="flex flex-col md:flex-row w-full">
           <div className="p-4 md:w-1/2 border-r">
-            <h2 className="text-2xl font-semibold mb-2 text-red-600">
+            <h2 className="text-2xl text-center font-semibold mb-2 text-red-600">
               Ingredients
             </h2>
-            <ul className="list-disc pl-5">
+            <ul className="pl-5">
               {recipe.ingredients.map((ingredient, index) => (
-                <li key={index}>{ingredient}</li>
+                <li className={`pl-5 mt-2 before:content-['✔']`} key={index}>
+                  {ingredient}
+                </li>
               ))}
             </ul>
           </div>
 
           <div className="p-4 md:w-1/2  bg-gray-600 text-white">
-            <h2 className="text-2xl font-semibold mb-2 text-red-600">
+            <h2 className="text-2xl font-semibold mb-2 text-red-600 text-center">
               Cooking Steps
             </h2>
-            <ol className="list-decimal pl-5 ">
+            <ol className=" list-none  pl-5 ">
               {recipe.instructions.map((instruction, index) => (
-                <li key={index}>{instruction}</li>
+                <li
+                  className={`pl-3 ml-2 mt-2 before:content-['✏']`}
+                  key={index}
+                >
+                  {instruction}
+                </li>
               ))}
             </ol>
           </div>
